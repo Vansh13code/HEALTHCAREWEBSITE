@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare Website</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, main, footer {
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+>
+<header>
+    <h1>Healthcare Website</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<main>
+    <style>
+        #captcha {
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="captcha"></div>
+        <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
+        <button onclick="validateCaptcha()">Submit</button>
+    
+        <script>
+            function generateCaptcha() {
+                let captcha = '';
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                for (let i = 0; i < 6; i++) {
+                    captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+                document.getElementById('captcha').textContent = captcha;
+            }
+    
+            function validateCaptcha() {
+                const captcha = document.getElementById('captcha').textContent;
+                const userInput = document.getElementById('captchaInput').value;
+                if (userInput === captcha) {
+                    alert('CAPTCHA verification successful!');
+                    generateCaptcha(); // regenerate captcha
+                } else {
+                    alert('CAPTCHA verification failed. Please try again.');
+                }
+            }
+    
+            // Generate initial captcha
+            generateCaptcha();
+        </script>
+
+    <section>
+        <h2>Welcome to Our Healthcare Website</h2>
+        <p>here you can upload a prescription report everything.</p>
+    </section>
+    <h1>Image Uploader</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <button type="submit">Upload Image</button> 
+    <section>
+        <h2>Our Services</h2>
+        <ul>
+            <li>Service 1
+                Neurologist
+            
+            </li>
+            <li>Service 2 
+                Diabeties
+            </li>
+            <li>Service 3
+                Cancer Treatment
+            </li>
+        </ul>
+    </section>
+    
+    
+</main>
+<footer>
+    <p>&copy; 2024 Healthcare Website. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
